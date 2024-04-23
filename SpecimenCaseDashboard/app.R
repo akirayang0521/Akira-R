@@ -9,7 +9,7 @@ library(tidyr)
 library(janitor)
 library(purrr)
 
-data <- read.csv('SpecimenCaseData.csv',stringsAsFactors = F,header=T)
+data <- read.csv('SpecimenData.csv',stringsAsFactors = F,header=T)
 data[["Specimen_ReceivedDate"]] <- lubridate::ymd(data[["Specimen_ReceivedDate"]])
 Year <- format(data[["Specimen_ReceivedDate"]],"%Y")
 Month <- format(data[["Specimen_ReceivedDate"]],"%b")
