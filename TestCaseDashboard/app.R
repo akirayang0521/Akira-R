@@ -8,7 +8,7 @@ library(pivottabler)
 library(tidyr)
 library(janitor)
 
-covid <- read.csv('CovidTestData.csv',stringsAsFactors = F,header=T)
+covid <- read.csv('TestData.csv',stringsAsFactors = F,header=T)
 covid[["Date"]] <- lubridate::ymd(covid[["Date"]])
 Month <- format(covid[["Date"]],'%B %Y')
 Month <- factor(Month,levels=c("March 2022", "April 2022","May 2022"),ordered=TRUE)
