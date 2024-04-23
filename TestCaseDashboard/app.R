@@ -1,5 +1,3 @@
-# CovidTestData
-
 Sys.setlocale("LC_TIME", "English")
 library(shiny)
 library(shinydashboard)
