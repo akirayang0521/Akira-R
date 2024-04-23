@@ -9,7 +9,7 @@ library(tidyr)
 library(janitor)
 library(purrr)
 
-data = read.csv('TestAndPaymentData.csv', stringsAsFactors = F, header=T, check.name = F)
+data = read.csv('CustomerData.csv', stringsAsFactors = F, header=T, check.name = F)
 data[["Received Date"]] <- lubridate::ymd(data[["Received Date"]])
 data[["Received Date"]] <- update(data[["Received Date"]], mday=01)
 ryear <- format(data[["Received Date"]],"%Y")
